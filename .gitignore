@@ -1,0 +1,3 @@
+tienda_virtual_env/
+*.pyc
+__pycache__/

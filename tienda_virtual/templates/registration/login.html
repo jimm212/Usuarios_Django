@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} REGISTRO {% endblock %}
+
+{% block content %} 
+
+    <h2>Iniciar Session</h2>
+
+    <form class="form" method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit" class="btn btn-secondary bg-gradient">Ingresar</button>
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+    {% if is_editing %} EDITAR OFERTA 
+    {% else %} CREAR OFERTA 
+    {% endif %} 
+{% endblock %}
+
+{% block content %}
+
+    <div style="text-align: center;">
+        <h1>{% if is_editing %} EDITAR OFERTA {% else %} CREAR NUEVA OFERTA {% endif %}</h1>
+    </div>
+  
+    <div>
+        <form method = "post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-secondary bg-danger">
+                {% if is_editing %} Actualizar Oferta {% else %}Crear Oferta {% endif %}
+            </button>
+        </form>
+    </div>
+
+    
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} PAGINA PRINCIPAL {% endblock %}
+
+{% block content %} 
+   <header class="text-center">
+        <h1>PAGINA PRINCIPAL</h1>
+   </header>
+
+   <div class="jumbotron bg-light p-5 rounded mt-4">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 col-sm-12 mx-auto text-center">
+                <h2 class="display-4">Bienvenido a Nuestra Tienda</h2>
+                <p class="lead">Explora nuestra selección de productos y ofertas</p>
+                <hr class="my-4">
+                <p>Haz clic en los enlaces de arriba para ir a nuestras categorías</p>
+                <button id="show-alert" class="btn btn-warning btn-lg btn-block">Presiona Aquí</button>
+            </div>
+        </div>
+   </div>
+
+   <nav class="text-center">
+        <a class="btn btn-primary" href="{% url 'productos:index'%}">Ir a Productos</a>
+        <a class="btn btn-secondary" href="{% url 'ofertas:index'%}">Ir a Ofertas</a>
+   </nav>
+
+{% endblock %}
